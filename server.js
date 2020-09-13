@@ -7,19 +7,22 @@ const { data } = require('autoprefixer');
 dotenv.config({ path: `${__dirname}/config.env` });
 
 //reading database info from environment variables
-let database = process.env.DATABASE;
-const dbpassword = process.env.DATABASE_PASSWORD;
+// let database = process.env.DATABASE;
+// const dbpassword = process.env.DATABASE_PASSWORD;
 
-database = database.replace('<PASSWORD>', dbpassword);
+// database = database.replace('<PASSWORD>', dbpassword);
 
 //mongoose setup
 mongoose
-  .connect(database, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    'mongodb+srv://joseph:g7IoCHkZ0n4tSsgz@cluster0.l0y2z.mongodb.net/natours?retryWrites=true&w=majority',
+    {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => {
     console.log('connection successful');
   })
