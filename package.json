@@ -1,0 +1,20 @@
+{
+  "name": "rahulhostel",
+  "version": "1.0.0",
+  "description": "Rahul hostel project file package",
+  "main": "server.js",
+  "scripts": {},
+  "author": "Joseph",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.4",
+    "ol": "^6.4.3",
+    "source-map-loader": "^1.1.0"
+  },
+  "engines": {
+    "node": "^10"
+  }
+}
