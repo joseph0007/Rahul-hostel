@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const express = require('express');
-const dotenv = require('dotenv');
 const app = express();
 
 const detailSchema = mongoose.Schema({
@@ -20,7 +19,7 @@ const cust_details = mongoose.model('cust_details', detailSchema);
 app.use(express.json());
 
 //serves static files
-app.use(express.static(`${__dirname}/dist`));
+app.use(express.static(`${__dirname}/public`));
 
 app.get('/contacts', (req, res) => {
   cust_details
