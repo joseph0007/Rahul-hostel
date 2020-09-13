@@ -25,6 +25,6 @@ mongoose
   })
   .catch((err) => console.log('conn failed' + err));
 
-app.listen(3000, '127.0.0.1', (err) => {
+app.listen(process.env.PORT, (err) => {
   console.log('connection established');
 });
