@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 const app = require('./app');
 
 // reading config.env file
-dotenv.config({ path: `${__dirname}/config.env` });
+// dotenv.config({ path: `${__dirname}/config.env` });
 
 // reading database info from environment variables
 let database = process.env.DATABASE;
